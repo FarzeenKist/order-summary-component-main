@@ -1,0 +1,241 @@
+/* ================== */
+/*       Reset        */
+/* ================== */
+
+/* Reset font size */
+
+html {
+  font-size: 62.5%;
+}
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+main,
+article,
+h1,
+h2,
+p,
+img {
+  margin: 0;
+}
+
+/* set up the body */
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Css Variables */
+
+:root {
+  /* Colors */
+  --clr-primary-pale-blue: 225 100% 94%;
+  --clr-primary-bright-blue: 245 75% 52%;
+  --clr-neutral-pale-blue: 225 100% 98%;
+  --clr-neutral-desaturated-blue: 224 23% 55%;
+  --clr-neutral-dark-blue: 223 47% 23%;
+
+  /* Font family */
+  --ff-red-hat: "Red Hat Display", sans-serif;
+  /* Font weights */
+  --fw-black: 900;
+  --fw-bold: 700;
+  --fw-medium: 500;
+  /* Font sizes */
+  --fs-card-title: 2rem;
+  --fs-card-infos: 1.5rem;
+  --fs-plan-title: 1.5rem;
+  --fs-plan-price: 1.15rem;
+}
+
+/* ======================== */
+/*    Utility classes      */
+/* ======================== */
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.block {
+  display: block;
+}
+/* Background colors */
+.bg-white {
+  background-color: hsl(255, 100%, 100%);
+}
+.bg-bright-blue {
+  background-color: hsl(var(--clr-primary-bright-blue));
+}
+
+.bg-pale-blue {
+  background-color: hsl(var(--clr-primary-pale-blue));
+}
+
+.bg-light-blue {
+  background-color: hsl(var(--clr-neutral-pale-blue));
+}
+
+/* Text color */
+.text-desaturated-blue {
+  color: hsl(var(--clr-neutral-desaturated-blue));
+}
+
+.text-white {
+  color: hsl(255, 100%, 100%);
+}
+
+/* Fonts  Family */
+
+.ff-redhat {
+  font-family: var(--ff-red-hat);
+}
+
+/* Font Weight */
+.fw-dark {
+  font-weight: var(--fw-black);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+.fw-medium {
+  font-weight: var(--fw-medium);
+}
+
+/* Font sizes */
+.fs-title {
+  font-size: var(--fs-card-title);
+}
+
+.fs-info {
+  font-size: var(--fs-card-infos);
+}
+
+.plan-title {
+  font-size: var(--fs-plan-title);
+}
+
+.plan-price {
+  font-size: var(--fs-plan-price);
+}
+
+.text-align {
+  text-align: center;
+}
+
+/* Spacing items */
+.margin-updown {
+  margin: 2rem 0;
+}
+
+.margin-center {
+  margin-inline: auto;
+}
+
+.padding-LR {
+  padding: 0 1em;
+}
+
+/* ======================== */
+/*       Components         */
+/* ======================== */
+
+.card {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 1.5rem;
+}
+.hero-container > img {
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.plan-container {
+  margin: 2rem;
+  flex-wrap: wrap;
+  border-radius: 1.5rem;
+}
+.plan-container > * {
+  padding: 1em;
+}
+
+.payment-btn {
+  padding: 0.9em 2.6em;
+  border: 1px solid hsl(var(--clr-primary-bright-blue));
+  border-radius: 1.5rem;
+}
+.payment-btn:hover,
+.payment-btn:focus {
+  cursor: pointer;
+  background-color: hsla(var(--clr-primary-bright-blue) / 75%);
+  border: 1px solid hsla(var(--clr-primary-bright-blue) / 75%);
+}
+
+.cancel-btn {
+  text-decoration: none;
+}
+.cancel-btn:hover,
+.cancel-btn:focus {
+  cursor: pointer;
+  color: hsla(0, 10%, 0%, 80%);
+}
+
+.change-btn {
+  font-size: 1.3rem;
+  color: hsl(var(--clr-primary-bright-blue));
+}
+
+.change-btn:hover,
+.change-btn:focus {
+  cursor: pointer;
+  color: hsla(var(--clr-primary-bright-blue) / 65%);
+}
+/* Imrproving some things on screen sizes above 500px */
+
+@media (min-width: 500px) {
+  :root {
+    --fs-card-title: 2.5rem;
+  }
+  body {
+    background-image: url("./images/pattern-background-desktop.svg");
+  }
+  .card {
+    max-width: 47.8rem;
+  }
+  .payment-btn {
+    padding: 0.9em 5em;
+  }
+}

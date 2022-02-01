@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Order summary card</title>
+
+    <!-- StyleSheet -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body class="bg-pale-blue flex ff-redhat">
+    <main class="flex">
+      <article class="card bg-white">
+        <div class="hero-container">
+          <img src="./images/illustration-hero.svg" alt="" />
+        </div>
+        <h1 class="fs-title fw-dark fs text-align margin-updown">
+          Order Summary
+        </h1>
+
+        <p
+          class="ff-redhat fs-info fw-medium text-desaturated-blue text-align margin-updown padding-LR"
+        >
+          You can now listen to millions of songs, audiobooks, and podcasts on
+          any device anywhere you like!
+        </p>
+        <div class="plan-container bg-light-blue flex margin-updown">
+          <img src="./images/icon-music.svg" alt="music icon" />
+          <div class="plan-info">
+            <h2 class="plan-title ff-redhat fw-bold">Annual Plan</h2>
+            <p class="plan-price text-desaturated-blue ff-redhat fw-medium">
+              $59.99/year
+            </p>
+          </div>
+          <a href="#" class="change-btn plan-price ff-redhat fw-bold">Change</a>
+        </div>
+        <button
+          class="payment-btn block margin-center margin-updown bg-bright-blue text-white ff-redhat fw-dark fs-info text-align"
+        >
+          Proceed to Payment
+        </button>
+        <div class="flex margin-updown">
+          <a
+            href="#"
+            class="cancel-btn block ff-redhat fw-bold text-desaturated-blue fs-info"
+            >Cancel Order</a
+          >
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
